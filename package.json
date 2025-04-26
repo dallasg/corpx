@@ -12,7 +12,11 @@
 	},
 	"dependencies": {
 		"@astrojs/cloudflare": "^12.5.1",
-		"astro": "^5.7.5"
+		"@astrojs/mdx": "^4.2.5",
+		"@tailwindcss/typography": "^0.5.16",
+		"@tailwindcss/vite": "^4.1.4",
+		"astro": "^5.7.5",
+		"tailwindcss": "^4.1.4"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250426.0",

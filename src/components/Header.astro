@@ -1,0 +1,18 @@
+---
+const navItems = [
+  { title: "Culture", href: "/culture" },
+  { title: "Leadership", href: "/leadership" },
+  { title: "Careers", href: "/careers" },
+  { title: "Life at CorpX", href: "/life" },
+  { title: "Merch", href: "/merch" },
+];
+---
+
+<header class="bg-blue-900 text-white p-6 flex justify-between items-center">
+  <a href="/" class="text-2xl font-bold">CorpX Technologies</a>
+  <nav class="space-x-6">
+    {navItems.map((item) => (
+      <a href={item.href} class="hover:underline">{item.title}</a>
+    ))}
+  </nav>
+</header>

@@ -1,0 +1,52 @@
+---
+// src/layouts/BaseLayout.astro
+import '../styles/global.css'
+import logoLight from '../assets/logo-light.svg'
+import logoDark from '../assets/logo-dark.svg'
+
+const { title = "CorpX Technologies" } = Astro.props;
+---
+
+<html lang="en" class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+
+  <body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-900 text-white p-4 flex justify-between items-center dark:bg-gray-800 dark:text-gray-100">
+      <a href="/" class="flex items-center space-x-2">
+        <!-- Light logo -->
+        <img src={logoLight.src} alt="CorpX Logo" class="h-10 w-auto block dark:hidden" />
+        <!-- Dark logo -->
+        <img src={logoDark.src} alt="CorpX Logo Dark Mode" class="h-10 w-auto hidden dark:block" />
+      </a>
+      <nav class="space-x-6">
+        <a href="/culture" class="hover:underline">Culture</a>
+        <a href="/leadership" class="hover:underline">Leadership</a>
+        <a href="/careers" class="hover:underline">Careers</a>
+        <a href="/life" class="hover:underline">Life at CorpX</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 container mx-auto p-8">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 text-gray-600 p-6 text-center text-sm dark:bg-gray-800 dark:text-gray-400">
+      <div class="mb-2">
+        &copy; 2025 CorpX Technologies. All Rights Preserved.<br />
+        Excellence Through Endurance.
+      </div>
+      <div class="space-x-4">
+        <a href="#" class="hover:underline">Privacy Policy</a>
+        <a href="#" class="hover:underline">Terms of Service</a>
+        <a href="#" class="hover:underline">Accessibility</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" viewBox="0 0 600 200">
+  <g>
+    <path d="M50 30 L70 50 L70 120 L50 140 L30 120 L30 50 Z" fill="#666666"/>
+    <text x="90" y="90" font-family="Open Sans, sans-serif" font-size="48" fill="#FFFFFF" font-weight="bold">
+      CorpX
+    </text>
+    <text x="90" y="140" font-family="Open Sans, sans-serif" font-size="16" fill="#CCCCCC">
+      Excellence Through Endurance
+    </text>
+  </g>
+</svg>

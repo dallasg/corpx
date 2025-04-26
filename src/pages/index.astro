@@ -1,11 +1,53 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import HeroSection from '../components/HeroSection.astro';
+import HeroTestimonial from '../components/HeroTestimonial.astro';
+import ApplyForm from '../components/ApplyForm.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="CorpX Technologies Careers">
+  <HeroSection title="Where Innovation Meets Exhaustion" subtitle="Delivering stakeholder-driven chaos since 2008." />
+
+  <section class="mt-16 text-center">
+    <h2 class="text-3xl font-bold mb-4">Welcome to CorpX</h2>
+    <p class="text-lg mb-6">
+      At CorpX, we believe in creating dynamic, stakeholder-driven environments where "good enough" is more than enough.
+    </p>
+    <a href="/careers" class="bg-blue-900 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
+      View Open Positions
+    </a>
+  </section>
+
+  <section class="mt-24">
+    <h2 class="text-3xl font-bold text-center mb-8">Why Work at CorpX?</h2>
+    <ul class="list-disc max-w-3xl mx-auto text-left space-y-4 text-lg">
+      <li>Dynamic Priorities</li>
+      <li>Innovation in Motion</li>
+      <li>Cross-Silo Collaboration</li>
+      <li>Real Impact (sometimes)</li>
+    </ul>
+  </section>
+
+  <section class="mt-24 text-center">
+    <h2 class="text-3xl font-bold mb-8">What Our Employees Are Saying</h2>
+    <blockquote class="italic text-gray-700">"CorpX gave me the opportunity to grow... sideways." — Jessica, Product Alignment Strategist</blockquote>
+    <blockquote class="italic text-gray-700 mt-6">"I found resilience I didn't know I needed." — Aaron, Backend Survival Engineer</blockquote>
+    <blockquote class="italic text-gray-700 mt-6">"Every day presents a new pivot to master." — Priya, Senior Roadmap Coordinator</blockquote>
+  </section>
+
+  <section class="mt-24 text-center">
+    <h2 class="text-3xl font-bold mb-8">What Our Employees Say</h2>
+    <HeroTestimonial quote="CorpX gave me the opportunity to grow... sideways." name="Jessica" title="Product Alignment Strategist" />
+  </section>
+
+  <section class="mt-24">
+    <ApplyForm />
+  </section>
+
+  <section class="mt-24 text-center">
+    <h2 class="text-3xl font-bold mb-8">Visit the CorpX Store!</h2>
+    <a href="/merch" class="bg-blue-900 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
+      See the Merch
+    </a>
+  </section>
+</BaseLayout>
